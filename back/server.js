@@ -3,8 +3,10 @@ const app = express();
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 var fs = require("fs");
+const path = require('path');
 var https = require("https");
 const credentials = require('./middleware/credentials');
+const db = require('./config/db');
 const PORT = process.env.PORT || 8000;
 require('dotenv').config();
 
@@ -23,16 +25,23 @@ app.use(cookieParser());
 // routes
 
 // app.use(errorHandler);
-
-
-https
-  .createServer(
-    {
-      key: fs.readFileSync("key.pem"),
-      cert: fs.readFileSync("cert.pem"),
-    },
-    app
-  )
-  .listen(PORT, () => {
-    console.log(`serever is runing at port ${PORT}`);
-  });
+const cdb = fs.readFileSync(path.join(__dirname, './sql/createDB.sql')).toString();
+db.connect( err => {
+    if (err) throw err;
+    console.log("Connected to DB!");
+    https
+        .createServer(
+            {
+            key: fs.readFileSync("key.pem"),
+            cert: fs.readFileSync("cert.pem"),
+            },
+            app
+        )
+        .listen(PORT, () => {
+            console.log(`serever is runing at port ${PORT}`);
+        });
+    // db.query(cdb, (err, result) => {
+    //   if (err) throw err;
+    //   console.log("Database created");
+    // });
+});
