@@ -4,12 +4,12 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 var fs = require("fs");
 var https = require("https");
+const credentials = require('./middleware/credentials');
 const PORT = process.env.PORT || 8000;
 require('dotenv').config();
 
 // cross origin resource sharing
-// app.use(credentials);
-// app.use(cors(corsOptions));
+app.use(credentials);
 
 // built-in middleware to handle urlencoded data
 app.use(express.urlencoded({ extended: true }));
