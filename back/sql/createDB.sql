@@ -1,9 +1,7 @@
 CREATE DATABASE shop;
 
-USE shop;
-
 CREATE TABLE customer (
-    customerID int NOT NULL,
+    customerID int NOT NULL AUTO_INCREMENT,
     customer varchar(255),
     address varchar(255),
     email varchar(255),
