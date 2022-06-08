@@ -1,7 +1,4 @@
-
 const bcrypt = require('bcrypt');
-const e = require('express');
-
 
 const handleNewUser = async(req, res) => {
     const db = require('../config/db');
