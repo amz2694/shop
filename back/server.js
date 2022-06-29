@@ -30,6 +30,7 @@ app.use('/api/v1/user', require('./routes/user'));
 app.use('/api/v1/gender', require('./routes/gender'));
 app.use('/api/v1/discount', require('./routes/discount'));
 app.use('/api/v1/newest', require('./routes/newest'));
+app.use('/api/v1/product', require('./routes/product'));
 
 // app.use(errorHandler);
 const cdb = fs.readFileSync(path.join(__dirname, './sql/createDB.sql')).toString();
