@@ -10,19 +10,19 @@ CREATE TABLE customer (
 );
 
 CREATE TABLE status (
-    statusID int NOT NULL,
+    statusID int NOT NULL AUTO_INCREMENT,
     status varchar(255),
     PRIMARY KEY (statusID)
 );
 
 CREATE TABLE payment (
-    paymentID int NOT NULL,
+    paymentID int NOT NULL AUTO_INCREMENT,
     payment varchar(255),
     PRIMARY KEY (paymentID)
 );
 
 CREATE TABLE commodity (
-    commodityID int NOT NULL,
+    commodityID int NOT NULL AUTO_INCREMENT,
     commodityName varchar(255),
     gender varchar(255),
     startingOdor varchar(255),
@@ -35,7 +35,7 @@ CREATE TABLE commodity (
 );
 
 CREATE TABLE salesInvoice (
-    invoiceID int NOT NULL,
+    invoiceID int NOT NULL AUTO_INCREMENT,
     commodityID int,
     paymentID int,
     statusID int,
@@ -49,7 +49,7 @@ CREATE TABLE salesInvoice (
 );
 
 CREATE TABLE picture (
-    pictureID int NOT NULL,
+    pictureID int NOT NULL AUTO_INCREMENT,
     pictureURL varchar(255),
     commodityID int,
     FOREIGN KEY (commodityID) REFERENCES commodity(commodityID),
@@ -57,7 +57,7 @@ CREATE TABLE picture (
 );
 
 CREATE TABLE cart (
-    cartID int NOT NULL,
+    cartID int NOT NULL AUTO_INCREMENT,
     invoiceID int,
     commodityID int,
     quantity int,
@@ -65,4 +65,17 @@ CREATE TABLE cart (
     FOREIGN KEY (invoiceID) REFERENCES salesInvoice(invoiceID),
     FOREIGN KEY (commodityID) REFERENCES commodity(commodityID),
     PRIMARY KEY (cartID)
+);
+
+CREATE TABLE comments (
+    commentID int NOT NULL AUTO_INCREMENT,
+    commodityID int NOT NULL,
+    customerID int NOT NULL,
+    fatherID int,
+    text varchar(255),
+    date DATE,
+    time TIME,
+    FOREIGN KEY (customerID) REFERENCES customer(customerID),
+    FOREIGN KEY (commodityID) REFERENCES commodity(commodityID),
+    PRIMARY KEY (commentID)
 );

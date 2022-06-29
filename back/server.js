@@ -27,7 +27,7 @@ app.use('/api/v1/register', require('./routes/register'));
 app.use('/api/v1/login', require('./routes/login'));
 app.use('/api/v1/refresh', require('./routes/refresh'));
 app.use('/api/v1/user', require('./routes/user'));
-
+app.use('/api/v1/gender', require('./routes/gender'));
 
 // app.use(errorHandler);
 const cdb = fs.readFileSync(path.join(__dirname, './sql/createDB.sql')).toString();
