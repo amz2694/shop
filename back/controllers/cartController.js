@@ -3,7 +3,7 @@ const db = require('../config/db');
 const handleCart = async(req,res) => {
     const { payment,cart } = req.body;
     const email = req.email
-    //if (!email || !pwd) return res.status(400).json({ "message": "email and password are required." });
+    if (!payment || !cart) return res.status(400).json({ "message": "payment and cart are required." });
     let sql = `SELECT customerID from customer WHERE email = '${email}'`;
     let date = new Date();
     let time= new Date().toLocaleTimeString().split(' ')[0];
