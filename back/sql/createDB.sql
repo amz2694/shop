@@ -36,7 +36,7 @@ CREATE TABLE commodity (
 
 CREATE TABLE salesInvoice (
     invoiceID int NOT NULL AUTO_INCREMENT,
-    commodityID int,
+    customerID int,
     paymentID int,
     statusID int,
     date DATE,
@@ -44,7 +44,7 @@ CREATE TABLE salesInvoice (
     trackingCode int,
     FOREIGN KEY (statusID) REFERENCES status(statusID),
     FOREIGN KEY (paymentID) REFERENCES payment(paymentID),
-    FOREIGN KEY (commodityID) REFERENCES commodity(commodityID),
+    FOREIGN KEY (customerID) REFERENCES customer(customerID),
     PRIMARY KEY (invoiceID)
 );
 
