@@ -1,16 +1,19 @@
 .header {
     width: 100%;
     background-color: rgb(201, 198, 194);
-    height: 60px;
+    height: 100px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
 }
 
 .header-container {
-    width: 90%;
+    width: 86%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
-    margin: 0 5%; 
+    height: 100px;
+    margin: 0 7%; 
 }
 
 .cart-container {

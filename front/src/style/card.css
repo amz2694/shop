@@ -1,0 +1,38 @@
+.card-container {
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    margin-bottom: 40px;
+}
+
+.card-img {
+    width: 340px;
+    height: 430px;
+    border-radius: 25px;
+    border: 1px solid #000000;
+}
+
+.uppercard {
+    position: relative;
+}
+
+.plus {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border-radius: 4px;
+    border: 0.5px solid #000000;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.downercard {
+    z-index: 5;
+}
+
+.title {
+    font-size: 26px;
+    margin-bottom: 0;
+}
