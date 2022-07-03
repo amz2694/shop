@@ -1,0 +1,34 @@
+.checkoutProdduct-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    margin: 10px 5%;
+}
+
+.imgcontaienr {
+    position: relative;
+}
+
+.imgcontaienr img {
+    width: 100px;
+    height: 100px;
+
+}
+
+.quantity {
+    text-align: center;
+    vertical-align: baseline;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgb(255, 123, 0);
+    color: #FFFFFF;
+    width: 20px;
+    height: 20px;
+    border-radius: 13px;
+}
+
+.detailscontainer {
+    margin-left: 30px;
+}
