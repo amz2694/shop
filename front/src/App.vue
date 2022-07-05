@@ -14,7 +14,10 @@ import Footer from './components/footer.vue';
 
 export default {
   name: 'App',
-  components: {Header,Footer}
+  components: {Header,Footer},
+  beforeMount () {
+    this.$store.commit('initCart');
+  }
 }
 </script>
 <style>

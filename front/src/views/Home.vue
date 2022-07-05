@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="upper">
-      <div class="category-contaienr">
+      <div class="categorycontaienr">
         <div class="span">test</div>
         <div class="span">test</div>
         <div class="span">test</div>
