@@ -7,9 +7,7 @@
                 <p class='QTY'>QTY</p>
                 <p class='total'>Total</p>
             </div>
-            <cartItem/>
-            <cartItem/>
-            <cartItem/>
+            <cartItem v-for="(item, index) in cart" :key="index" :item="item" @removeFromCart="removeFromCart"/>
         </div>
         <div class="cartcheckout">
             <div class="subtotal-container">
@@ -25,8 +23,27 @@
 import cartItem from '../components/cartItem.vue'
 
 export default {
-  name: 'cart',
-  components: {cartItem}
+    name: 'cart',
+    components: {cartItem},
+    data() {
+        return {
+            cart : []
+        }
+    },
+    beforeMount() {
+        this.cart = this.$store.state.cart;
+    },
+    methods : {
+        removeFromCart(item) {
+            this.cart = this.cart.filter(
+                (i) => i.id !== item.id
+            );
+            this.$store.state.cart = this.$store.state.cart.filter(
+                (i) => i.id !== item.id
+            );
+            this.$store.commit('saveCart');
+        },
+    }
 }
 </script>
 
