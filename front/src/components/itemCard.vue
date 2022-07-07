@@ -28,9 +28,7 @@ export default {
                 id : 1,
                 quantity : 1
             }
-            console.log(this.cart)
-            this.cart.push(item);
-            this.$store.commit('saveCart');
+            this.$store.commit('addToCart',item);
         }
     }
 }

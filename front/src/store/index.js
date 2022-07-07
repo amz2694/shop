@@ -10,18 +10,26 @@ export default createStore({
       if (localStorage.getItem('cart')) {
         try {
           state.cart = JSON.parse(localStorage.getItem('cart'));
-          //console.log(state.cart);
         } catch (err) {
           console.log(err);
           localStorage.removeItem('cart');
         }
       }
     },
-    saveCart(newCart) {
-      const parsed = JSON.stringify(newCart.cart);
+    saveCart(state) {
+      const parsed = JSON.stringify(state.cart);
       localStorage.setItem('cart', parsed);
-      this.commit('initCart');
-    }
+    },
+    addToCart (state,item) {
+      const exists = state.cart.filter(i => i.id === item.id)
+      if (exists.length) {
+        exists[0].quantity = parseInt(exists[0].quantity) + parseInt(item.quantity)
+        console.log('exist')
+      } else {
+        state.cart.push(item);
+      }
+      this.commit('saveCart',state.cart);
+  }
   },
   actions: {
   },
