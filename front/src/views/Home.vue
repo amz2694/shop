@@ -35,32 +35,41 @@
       </div>
     </div>
     <div class="cards-container">
-      <itemCard/>
-      <itemCard/>
-      <itemCard/>
-      <itemCard/>
-      <itemCard/>
-      <itemCard/>
-      <itemCard/>
-      <itemCard/>
+      <itemCard v-for="(product,index) in products" :key="index" :item="product"/>
     </div>
   </div>
   <div class="home2">
     <div class="secbanner-container"></div>
+    <!-- <cardsContainer/>
     <cardsContainer/>
-    <cardsContainer/>
-    <cardsContainer/>
+    <cardsContainer/> -->
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import itemCard from '../components/itemCard.vue'
-import cardsContainer from '../components/cardsContainer.vue'
+import axios from 'axios';
+import itemCard from '../components/itemCard.vue';
+import cardsContainer from '../components/cardsContainer.vue';
 
 export default {
   name: 'Home',
-  components: {itemCard,cardsContainer}
+  components: {itemCard,cardsContainer},
+  data() {
+    return {
+      products : [],
+    }
+  },
+    async beforeMount () {
+      await axios
+        .get('https://localhost:8000/api/v1/newest')
+        .then(res => {
+          this.products = res.data;
+        })
+        .catch(err => {
+          console.log(err);
+      })
+    },
 }
 </script>
 

@@ -5,8 +5,8 @@
           <img src="../assets/plus.png" class="plus" @click="addToCart">
       </div>
       <div class="downercard">
-          <p class="title">test</p>
-          <p class="price">500</p>
+          <p class="title">{{ product.commodityName }}</p>
+          <p class="price">{{ product.price }}</p>
       </div>
   </div>
 </template>
@@ -14,9 +14,13 @@
 <script>
 export default {
     name: 'itemCard',
+    props : {
+        item : Object
+    },
     data() {
         return {
-            cart : []
+            cart : [],
+            product : this.item
         }
     },
     beforeMount() {
@@ -25,7 +29,7 @@ export default {
     methods : {
         addToCart () {
             let item = {
-                id : 1,
+                id : this.item.commodityID,
                 quantity : 1
             }
             this.$store.commit('addToCart',item);
