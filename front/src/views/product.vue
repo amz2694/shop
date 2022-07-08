@@ -2,27 +2,65 @@
   <div class="productpage-container">
       <img src="../assets/prof.png" class="productimg">
       <div class="productdetails-container">
-          <p class="producttitle">test</p>
+          <p class="producttitle">{{ product.commodityName }}</p>
           <div class="downtitle">
               <div class="productquantity-container">
-                  <span>-</span>
-                  <span class="productquantity">1</span>
-                  <span>+</span>
+                  <button @click="minus" class="click">-</button>
+                  <input class="productquantity" v-model="quantity" type="number" min="1">
+                  <button @click="plus" class="click">+</button>
               </div>
-              <p class="productprice">250</p>
+              <p class="productprice">{{ product.price }}</p>
           </div>
           <p class="productdis">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore dignissimos sunt similique eaque quo at labore ex tenetur quisquam facere. Veniam dolorem id voluptates quis facere esse expedita nulla est.</p>
           <button class="addtocartbut">
               <img src="../assets/cart-24.png" class="carticon">
-              <span>ADD TO CART</span>
+              <span @click="addToCart">ADD TO CART</span>
           </button>
       </div>
   </div>
 </template>
 
 <script>
-export default {
+import axios from 'axios'
 
+export default {
+    name: 'product',
+    data() {
+        return {
+            product : {},
+            quantity : 1
+        }
+    },
+    async beforeMount () {
+        const productID = this.$route.params.product;
+        await axios
+            .get('https://localhost:8000/api/v1/product',{ params: {ID: productID}})
+            .then(res => {
+                this.product = res.data[0];
+            })
+            .catch(err => {
+                console.log(err);
+        })
+    },
+    methods : {
+        addToCart () {
+            let item = {
+                id : this.product.commodityID,
+                quantity : this.quantity
+            }
+            console.log(item)
+            this.$store.commit('addToCart',item);
+        },
+        plus () {
+            this.quantity += 1;
+        },
+        minus () {
+            if (this.quantity > 1) {
+                this.quantity -= 1;
+            }
+        },
+
+    }
 }
 </script>
 

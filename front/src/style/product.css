@@ -1,5 +1,5 @@
 .productpage-container {
-    width: 100%;
+    width: 90%;
     padding-left: 10%;
     display: flex;
     justify-content: flex-end;
@@ -42,8 +42,37 @@
     padding: 1px 15px;
 }
 
+.click {
+    border: none;
+    outline: none;
+    border: none;
+    background-color: rgb(201, 198, 194);
+    width: 20px;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
 .productquantity {
     margin: 0 20px ;
+    border: none;
+    width: 15px;
+    background-color: rgb(201, 198, 194);
+    outline: none;
+    text-align: center;
+    margin: 5px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .producttitle {
