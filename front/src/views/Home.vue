@@ -40,9 +40,9 @@
   </div>
   <div class="home2">
     <div class="secbanner-container"></div>
-    <!-- <cardsContainer/>
-    <cardsContainer/>
-    <cardsContainer/> -->
+    <cardsContainer typ="man"/>
+    <cardsContainer typ="woman"/>
+    <cardsContainer typ="discount"/>
   </div>
 </template>
 
