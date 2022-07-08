@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const db = require('../config/db');
 
 const handleLogin = async(req, res) => {
-    const { email, pwd } = req.body;
+    const { email, pwd } = req.query;
     if (!email || !pwd) return res.status(400).json({ "message": "email and password are required." });
     let sql = `SELECT * from customer WHERE email = '${email}'`;
     try {

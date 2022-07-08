@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 const handleNewUser = async(req, res) => {
     const db = require('../config/db');
     const { user,email,pwd,add } = req.body;
-    if (!user || !pwd || !email || !add ) return res.status(400).json({ "message": "username and password and email and address are required." });
+    if (!user || !pwd || !email ) return res.status(400).json({ "message": "username and password and email are required." });
     let sql = `SELECT * from customer WHERE email = '${email}'`;
     try {
         const [rows, fields] = await db.promise().query(sql)
