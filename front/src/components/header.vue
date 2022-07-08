@@ -15,11 +15,20 @@
         </div>
       </div>
   </div>
+  <login v-if="showLogin" />
 </template>
 
 <script>
-export default {
+import login from './login.vue'
 
+export default {
+  name: 'header',
+  components: {login},
+  data () {
+    return {
+      showLogin : true
+    }
+  }
 }
 </script>
 

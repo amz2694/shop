@@ -1,0 +1,79 @@
+.loginback {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.logincontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 50%;
+}
+
+.loginimg {
+    width: 45%;
+    height: 500px;
+}
+
+.inputs-container {
+    width: 55%;
+    height: 500px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logintitle {
+    margin-top: 60px;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.logindis {
+    margin-top: 0;
+}
+
+.create {
+    cursor: pointer;
+    color: rgb(33, 36, 211);
+}
+
+.logininput {
+    width: 70%;
+    margin-top: 40px;
+    margin-bottom: -25px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    background-color: rgb(255, 242, 215);
+    height: 50px;
+    padding-left: 5%;
+}
+
+.loginbut {
+    width: 75%;
+    margin-top: 75px;
+    border: none;
+    border-radius: 30px;
+    outline: none ;
+    text-align: center;
+    height: 50px;
+    background-color: rgb(98, 224, 212);
+    color: #FFFFFF;
+}
+
+
+.hide {
+    display: none;
+}
