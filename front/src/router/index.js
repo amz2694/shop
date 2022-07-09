@@ -1,9 +1,10 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
-import Home from '../views/Home.vue'
-import cart from '../views/cart.vue'
-import checkout from '../views/checkout.vue'
-import product from '../views/product.vue'
-import shop from '../views/shop.vue'
+import { createRouter, createWebHashHistory } from 'vue-router';
+import Home from '../views/Home.vue';
+import cart from '../views/cart.vue';
+import checkout from '../views/checkout.vue';
+import product from '../views/product.vue';
+import shop from '../views/shop.vue';
+import myAccount from '../views/myAccount.vue';
 
 const routes = [
   {
@@ -35,6 +36,11 @@ const routes = [
     path: '/shop',
     name: 'shop',
     component: shop
+  },
+  {
+    path: '/myAccount',
+    name: 'myAccount',
+    component: myAccount
   },
   {
     path: '/about',

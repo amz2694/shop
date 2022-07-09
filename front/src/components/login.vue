@@ -2,7 +2,7 @@
     <div class="loginback">
         <div class="logincontainer">
             <img src="../assets/prof.png" class="loginimg">
-            <div class="inputs-container">
+            <div class="inputs-container hide">
                 <p class="logintitle">Login</p>
                 <p class="logindis">dont have account <span class="create" @click="toggleLogin">create one</span></p>
                 <input type="text" placeholder="Email" class="logininput" v-model="Email">

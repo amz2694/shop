@@ -26,7 +26,7 @@ export default {
   components: {login},
   data () {
     return {
-      showLogin : true
+      showLogin : false
     }
   }
 }
