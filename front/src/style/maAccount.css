@@ -44,6 +44,7 @@
     justify-content: center;
     align-items: flex-start;
 }
+
 table {
     width: 96%;
     padding: 10px 2%;
@@ -97,3 +98,48 @@ td {
     background-color: #000000;
     color: #FFFFFF;
 } 
+
+.dashboard-container {
+    width: 76%;
+    padding: 30px 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    background-color: #FFFFFF;
+}
+
+.userinfo {
+    width: 40%;
+    margin: 10px 2%;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    background-color: rgb(255, 242, 215);
+    height: 50px;
+    padding-left: 5%;
+}
+
+.save {
+    width: 45%;
+    margin: 10px 2%;
+    border: none;
+    border-radius: 30px;
+    outline: none ;
+    text-align: center;
+    height: 50px;
+    background-color: rgb(98, 224, 212);
+    color: #FFFFFF;
+}
+
+.dashboard-container p {
+    width: 100%;
+    font-weight: bold;
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+    
+.hide {
+    display: none;
+}

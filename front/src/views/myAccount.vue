@@ -14,8 +14,12 @@
             <p>logout</p>
           </div>
       </div>
-      <div class="dashboard-container">
-
+      <div class="dashboard-container hide">
+          <p>change account</p>
+          <input type="text" class="userinfo" placeholder="name">
+          <input type="text" class="userinfo" placeholder="password">
+          <input type="text" class="userinfo" placeholder="address">
+          <button class="save">save</button>
       </div>
       <div class="orders-container">
           <table>
@@ -57,10 +61,19 @@
           </table>
       </div>
   </div>
+<cartitems/>
 </template>
 
 <script>
+import cartitems from '../components/cartitems.vue'
+
 export default {
+    name: 'myAccount',
+    components: {cartitems},
+    data() {
+      return {
+      }
+    },
 
 }
 </script>
