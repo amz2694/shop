@@ -23,9 +23,6 @@ export default {
       }
     },
     props : ["item"],
-    beforeMount() {
-      //this.cart = this.$store.state.cart;
-    },
     methods : {
       plus () {
         this.$store.state.cart.forEach( item => {

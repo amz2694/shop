@@ -1,5 +1,5 @@
 <template>
-    <div class="loginback">
+    <div class="loginback" @click.self="close">
         <div class="logincontainer">
             <img src="../assets/prof.png" class="loginimg">
             <div class="inputs-container hide">
@@ -51,6 +51,7 @@ export default {
                 .post('https://localhost:8000/api/v1/register',signupdata)
                 .then(res => {
                     console.log(res.data);
+                    this.$emit("closeLogin");
                 })
                 .catch(err => {
                     console.log(err);
@@ -68,12 +69,16 @@ export default {
                 .get('https://localhost:8000/api/v1/login',{params : signupdata},{withCredentials: true})
                 .then(res => {
                     console.log(res.data);
+                    this.$emit("closeLogin");
                 })
                 .catch(err => {
                     console.log(err);
             })
           }
-      }
+      },
+      close() {
+            this.$emit("closeLogin");
+        }
   }
 }
 </script>

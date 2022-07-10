@@ -10,12 +10,12 @@
         </div>
         <div class="option-container">
             <input type="search" class="search" placeholder="search">
-            <span class="register">register</span>
-            <span class="login">login</span>
+            <span class="register" @click="toggleViewLogin">register</span>
+            <span class="login" @click="toggleViewLogin">login</span>
         </div>
       </div>
   </div>
-  <login v-if="showLogin" />
+  <login v-if="showLogin" @closeLogin="toggleViewLogin"/>
 </template>
 
 <script>
@@ -27,6 +27,11 @@ export default {
   data () {
     return {
       showLogin : false
+    }
+  },
+  methods : {
+    toggleViewLogin() {
+      this.showLogin = !this.showLogin;
     }
   }
 }
