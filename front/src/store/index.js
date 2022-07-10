@@ -3,10 +3,24 @@ import { createStore } from 'vuex'
 export default createStore({
   state: {
     cart : [],
+    accessToken : ''
   },
   mutations: {
+    initToken (state) {
+      if (localStorage.getItem('accessToken')) {
+        try {
+          state.accessToken = JSON.parse(localStorage.getItem('accessToken'));
+        } catch (err) {
+          console.log(err);
+          localStorage.removeItem('accessToken');
+        }
+      }
+    },
+    saveToken(state) {
+      const parsed = JSON.stringify(state.accessToken);
+      localStorage.setItem('accessToken', parsed);
+    },
     initCart(state) {
-      console.log('hey');
       if (localStorage.getItem('cart')) {
         try {
           state.cart = JSON.parse(localStorage.getItem('cart'));

@@ -69,7 +69,7 @@ export default {
                 .get('https://localhost:8000/api/v1/login',{params : signupdata},{withCredentials: true})
                 .then(res => {
                     console.log(res.data);
-                    this.$emit("closeLogin");
+                    this.$emit("closeLogin",res.data.accessToken);
                 })
                 .catch(err => {
                     console.log(err);

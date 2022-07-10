@@ -17,6 +17,7 @@ export default {
   components: {Header,Footer},
   beforeMount () {
     this.$store.commit('initCart');
+    this.$store.commit('initToken');
   }
 }
 </script>
