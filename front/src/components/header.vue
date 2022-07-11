@@ -3,7 +3,7 @@
       <div class="header-container">
         <div class="cart-container">
             <img src="../assets/cart.png" alt="cart" class="cartimg">
-            <span>500</span>
+            <span>{{ this.$store.state.totalCart }}</span>
         </div>
         <div class="logo-container">
             <span>SHOP</span>

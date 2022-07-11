@@ -18,6 +18,7 @@ export default {
   beforeMount () {
     this.$store.commit('initCart');
     this.$store.commit('initToken');
+    this.$store.dispatch('totalCart');
   }
 }
 </script>

@@ -12,7 +12,7 @@
         <div class="cartcheckout">
             <div class="subtotal-container">
                 <p>subtotal</p>
-                <p>750</p>
+                <p>{{ this.$store.state.totalCart }}</p>
             </div>
             <button class="checkoutbut">checkout</button>
         </div>
@@ -20,18 +20,21 @@
 </template>
 
 <script>
-import cartItem from '../components/cartItem.vue'
+import cartItem from '../components/cartItem.vue';
+import axios from 'axios';
 
 export default {
     name: 'cart',
     components: {cartItem},
     data() {
         return {
-            cart : []
+            cart : [],
+            total : 0
         }
     },
-    beforeMount() {
+    async beforeMount() {
         this.cart = this.$store.state.cart;
+
     },
     methods : {
         removeFromCart(item) {
@@ -42,7 +45,7 @@ export default {
                 (i) => i.id !== item.id
             );
             this.$store.commit('saveCart');
-        },
+        }
     }
 }
 </script>

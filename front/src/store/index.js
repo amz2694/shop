@@ -1,9 +1,11 @@
-import { createStore } from 'vuex'
+import { createStore } from 'vuex';
+import axios from 'axios';
 
 export default createStore({
   state: {
     cart : [],
-    accessToken : ''
+    accessToken : '',
+    totalCart : 0
   },
   mutations: {
     initToken (state) {
@@ -43,9 +45,23 @@ export default createStore({
         state.cart.push(item);
       }
       this.commit('saveCart',state.cart);
-  }
+    },
   },
   actions: {
+    async totalCart ({state ,commit}) {
+      state.totalCart = 0;
+      for (let i in state.cart) {
+      await axios
+          .get('https://localhost:8000/api/v1/product',{params : {ID : state.cart[i].id}})
+          .then(res => {
+              let price = res.data[0].price;
+              state.totalCart += price*state.cart[i].quantity;
+          })
+          .catch(err => {
+              console.log(err);
+      })
+  }
+  } 
   },
   modules: {
   }
