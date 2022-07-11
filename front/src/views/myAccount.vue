@@ -73,7 +73,7 @@ export default {
                     this.showLogin = false;
                 })
                 .catch(err => {
-                    this.showAuth = true;
+                    this.showLogin = true;
                     console.log(err);
                 })
             } else {

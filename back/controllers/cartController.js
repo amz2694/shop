@@ -20,9 +20,9 @@ const handleCart = async(req,res) => {
         const invoiceIDQuery = await db.promise().query(sql)
         const invoiceID =invoiceIDQuery[0][0].invoiceID;
         for (i in cart) {
-            sql = `SELECT price from commodity WHERE commodityID = '${cart[i].ID}'`
+            sql = `SELECT price from commodity WHERE commodityID = '${cart[i].id}'`
             const priceQuery = await db.promise().query(sql);
-            const commodityID = cart[i].ID;
+            const commodityID = cart[i].id;
             const price = priceQuery[0][0].price;
             const quantity = cart[i].quantity;
             let msql = `INSERT INTO cart (invoiceID, commodityID, quantity, perOnePrice) VALUES (${invoiceID}, ${commodityID}, ${quantity}, '${price}');`;

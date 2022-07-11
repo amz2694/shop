@@ -32,9 +32,8 @@ export default {
             total : 0
         }
     },
-    async beforeMount() {
+    beforeMount() {
         this.cart = this.$store.state.cart;
-
     },
     methods : {
         removeFromCart(item) {
