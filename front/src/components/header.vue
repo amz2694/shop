@@ -1,10 +1,12 @@
 <template>
   <div class="header">
       <div class="header-container">
+        <router-link to="/cart">
         <div class="cart-container">
             <img src="../assets/cart.png" alt="cart" class="cartimg">
             <span>{{ this.$store.state.totalCart }}</span>
         </div>
+        </router-link>
         <div class="logo-container">
             <span>SHOP</span>
         </div>

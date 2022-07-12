@@ -14,7 +14,9 @@
                 <p>subtotal</p>
                 <p>{{ this.$store.state.totalCart }}</p>
             </div>
-            <button class="checkoutbut">checkout</button>
+            <router-link to="/checkout" class="checkoutbut">
+                <button class="checkoutbut">checkout</button>
+            </router-link>
         </div>
     </div>
 </template>

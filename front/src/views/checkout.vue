@@ -7,7 +7,9 @@
           <input type="text" class="number-input" placeholder="number">
           <input type="text" class="address-input" placeholder="address">
           <div class="button-container">
-              <button class="return">return to cart</button>
+              <router-link class="returnlink" to="/cart">
+                <button class="return">return to cart</button>
+              </router-link>
               <button class="continue" @click="checkout">Continue to shipping</button>
           </div>
       </div>
