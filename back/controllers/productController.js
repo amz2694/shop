@@ -7,6 +7,10 @@ const handleProduct = async(req,res) => {
         const [rows, fields] = await db.promise().query(sql)
         let resault;
         resault =rows;
+        sql = `SELECT pictureURL FROM picture WHERE commodityID = ${ID}`;
+        let pictureQuery = await db.promise().query(sql);
+        let pictureURL = pictureQuery[0][0]?.pictureURL;
+        resault[0].pictureURL = pictureURL;
         res.status(200).json(resault);
     } catch(err) {
         res.status(500).json({ "message": err.message });

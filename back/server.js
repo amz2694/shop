@@ -18,6 +18,9 @@ app.use(cors(corsOptions));
 // built-in middleware to handle urlencoded data
 app.use(express.urlencoded({ extended: true }));
 
+app.use(express.static(path.resolve('./public')));
+//app.use(express.static('public'));
+
 // built-in middleware for json
 app.use(express.json());
 

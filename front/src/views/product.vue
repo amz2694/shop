@@ -1,6 +1,6 @@
 <template>
   <div class="productpage-container" v-if="!show404">
-      <img src="../assets/prof.png" class="productimg">
+      <img :src="img" class="productimg">
       <div class="productdetails-container">
           <p class="producttitle">{{ product.commodityName }}</p>
           <div class="downtitle">
@@ -58,6 +58,7 @@ export default {
             product : {},
             quantity : 1,
             show404 : false,
+            img : ''
         }
     },
     async beforeMount () {
@@ -66,6 +67,7 @@ export default {
             .get('https://localhost:8000/api/v1/product',{ params: {ID: productID}})
             .then(res => {
                 this.product = res.data[0];
+                this.img = res.data[0].pictureURL;
                 console.log(this.product)
                 if (this.product == undefined) {
                     this.show404 = true
