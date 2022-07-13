@@ -104,3 +104,14 @@ input[type=number] {
     width: 24px;
     height: 24px;
 }
+
+.notfoundcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notfoundcontainer p {
+    font-weight: bold;
+    font-size: 28px;
+}

@@ -1,5 +1,5 @@
 <template>
-  <div class="productpage-container">
+  <div class="productpage-container" v-if="!show404">
       <img src="../assets/prof.png" class="productimg">
       <div class="productdetails-container">
           <p class="producttitle">{{ product.commodityName }}</p>
@@ -18,6 +18,9 @@
           </button>
       </div>
   </div>
+  <div class="notfoundcontainer" v-if="show404">
+      <p>404 not found</p>
+  </div>
 </template>
 
 <script>
@@ -28,7 +31,8 @@ export default {
     data() {
         return {
             product : {},
-            quantity : 1
+            quantity : 1,
+            show404 : false,
         }
     },
     async beforeMount () {
@@ -37,6 +41,10 @@ export default {
             .get('https://localhost:8000/api/v1/product',{ params: {ID: productID}})
             .then(res => {
                 this.product = res.data[0];
+                if (this.product == undefined) {
+                    console.log('yo')
+                    this.show404 = true
+                }
             })
             .catch(err => {
                 console.log(err);
