@@ -27,4 +27,10 @@ body {
   padding: 0;
   margin: 0;
 }
+
+a, u {
+  text-decoration: none;
+  color: #000000;
+}
+
 </style>
