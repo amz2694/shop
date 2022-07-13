@@ -39,6 +39,7 @@ app.use('/api/v1/product', require('./routes/product'));
 app.use('/api/v1/cart', require('./routes/cart'));
 app.use('/api/v1/getcart', require('./routes/getcart'));
 app.use('/api/v1/search', require('./routes/search'));
+app.use('/api/v1/comment', require('./routes/comment'));
 
 // app.use(errorHandler);
 const cdb = fs.readFileSync(path.join(__dirname, './sql/createDB.sql')).toString();
