@@ -17,6 +17,31 @@
               <span @click="addToCart">ADD TO CART</span>
           </button>
       </div>
+      <div class="fullinfocontainer hide">
+          <table>
+              <tr>
+                  <td>finalOdor</td>
+                  <td>{{product.finalOdor}}</td>
+              </tr>
+              <tr>
+                  <td>middleOdor</td>
+                  <td>{{product.middleOdor}}</td>
+              </tr>
+              <tr>
+                  <td>startingOdor</td>
+                  <td>{{product.startingOdor}}</td>
+              </tr>
+              <tr>
+                  <td>gender</td>
+                  <td>{{product.gender}}</td>
+              </tr>
+              <tr>
+                  <td>volume</td>
+                  <td>{{product.volume}}</td>
+              </tr>
+          </table>
+      </div>
+      <img src="../assets/forward.png" class="showFull" @click="toggledetails">
   </div>
   <div class="notfoundcontainer" v-if="show404">
       <p>404 not found</p>
@@ -41,8 +66,8 @@ export default {
             .get('https://localhost:8000/api/v1/product',{ params: {ID: productID}})
             .then(res => {
                 this.product = res.data[0];
+                console.log(this.product)
                 if (this.product == undefined) {
-                    console.log('yo')
                     this.show404 = true
                 }
             })
@@ -67,6 +92,12 @@ export default {
                 this.quantity -= 1;
             }
         },
+        toggledetails() {
+            const full = document.getElementsByClassName('fullinfocontainer')[0];
+            const half = document.getElementsByClassName('productdetails-container')[0];
+            full.classList.toggle('hide');
+            half.classList.toggle('hide');
+        }
 
     }
 }

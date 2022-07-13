@@ -13,6 +13,7 @@
 }
 
 .productdetails-container {
+    position: relative;
     width: 40%;
     padding-top: 5%;
     padding-left: 5%;
@@ -114,4 +115,26 @@ input[type=number] {
 .notfoundcontainer p {
     font-weight: bold;
     font-size: 28px;
+}
+
+.showFull {
+    position: absolute;
+    top: 46%;
+    right: 10px;
+    z-index: 10;
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.fullinfocontainer {
+    width: 40%;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 12%;
+    background-color: rgb(201, 198, 194);
 }
