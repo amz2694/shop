@@ -1,0 +1,28 @@
+.comment-container {
+    position: relative;
+    width: 32%;
+    margin-right: 3%;
+    height: 200px;
+    background-color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 25px;
+    padding: 10px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    justify-content: flex-start;
+}
+
+.comment-container:last-child {
+    margin-right: 0;
+}
+
+.comment-container:hover {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.replay {
+    position: absolute;
+    bottom: 25px;
+    right: 10px;
+}

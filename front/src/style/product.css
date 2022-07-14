@@ -2,8 +2,13 @@
     width: 90%;
     padding-left: 10%;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
     margin: 100px auto;
+}
+
+.productsection {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .productimg {
@@ -137,4 +142,24 @@ input[type=number] {
     padding-left: 5%;
     padding-right: 12%;
     background-color: rgb(201, 198, 194);
+}
+
+.commentsection {
+    width: 86%;
+    padding: 20px 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.commentcontainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.commentsection-p {
+    font-weight: bold;
+    font-size: 28px;
 }
