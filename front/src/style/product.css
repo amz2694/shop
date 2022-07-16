@@ -27,7 +27,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    background-color: rgb(201, 198, 194);
+    background-color: #EEEEEE;
 }
 
 .downtitle {
@@ -52,7 +52,7 @@
     border: none;
     outline: none;
     border: none;
-    background-color: rgb(201, 198, 194);
+    background-color: #EEEEEE;
     width: 20px;
     cursor: pointer;
     margin: 0;
@@ -63,7 +63,7 @@
     margin: 0 20px ;
     border: none;
     width: 15px;
-    background-color: rgb(201, 198, 194);
+    background-color: #EEEEEE;
     outline: none;
     text-align: center;
     margin: 5px;
@@ -141,7 +141,7 @@ input[type=number] {
     padding-top: 5%;
     padding-left: 5%;
     padding-right: 12%;
-    background-color: rgb(201, 198, 194);
+    background-color: #EEEEEE;
 }
 
 .commentsection {

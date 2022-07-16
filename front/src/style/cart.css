@@ -8,6 +8,7 @@
     padding: 0 13%;
     display: flex;
     flex-direction: column;
+    height: 65vh;
 }
 
 .tableheader {
@@ -36,7 +37,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    background-color: rgb(201, 198, 194);
+    background-color: #EEEEEE;
 }
 
 .subtotal-container {

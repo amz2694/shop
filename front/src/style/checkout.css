@@ -4,7 +4,8 @@
     padding: 40px 20%;
     justify-content: space-between;
     align-items: flex-start;
-    background-color: rgb(231, 231, 231);
+    background-color: #f6f6f6;
+    height: 70vh;
 }
 
 .checkoutAdddress-container {
@@ -26,7 +27,7 @@
     width: 74%;
     margin: 15px 13%;
     border-radius: 20px;
-    background-color: rgb(223, 223, 223);
+    background-color: #EEEEEE;
     height: 50px;
     padding: 3px 20px;
     font-size: 18px;

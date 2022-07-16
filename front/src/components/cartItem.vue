@@ -4,9 +4,9 @@
       <p class="itemtitle">{{ product.commodityName }}</p>
       <p class="itemprice">{{ product.price }}</p>
       <div class="qty-container">
-          <img src="../assets/back.png" class="back" @click="minus">
+          <img src="../assets/back.png" class="backwardd" @click="minus">
           <p class="qty">{{ item.quantity }}</p>
-          <img src="../assets/forward.png" class="forward" @click="plus">
+          <img src="../assets/forward.png" class="forwardd" @click="plus">
       </div>
       <p class="totalprice">{{ item.quantity*product.price }}</p>
       <img src="../assets/close.png" class="delete" @click="removeFromCart">

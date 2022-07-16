@@ -3,15 +3,14 @@
     display: flex;
     flex-direction: column;
     margin-right: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     scroll-snap-align: start;
 }
 
 .card-img {
     width: 340px;
-    height: 430px;
+    height: 380px;
     border-radius: 25px;
-    border: 1px solid #000000;
 }
 
 .uppercard {

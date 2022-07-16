@@ -43,15 +43,15 @@
     cursor: pointer;
 }
 
-.back,
-.forward {
+.backwardd,
+.forwardd {
     width: 15px;
     height: 15px;
     cursor: pointer;
     padding: 4px;
     border: rgb(180, 180, 180) solid 0.5px;
     border-radius: 12px;
-    background-color: rgb(252, 232, 206);
+    background-color: #EEEEEE;
 }
 
 .qty {
