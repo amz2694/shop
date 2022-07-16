@@ -23,6 +23,13 @@ export default {
 }
 </script>
 <style>
+@font-face {
+  font-family: fair;
+  src: url(./assets/PlayfairDisplay-VariableFont_wght.ttf);
+}
+* {
+  font-family: fair;
+}
 body {
   padding: 0;
   margin: 0;
