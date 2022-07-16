@@ -14,24 +14,24 @@
     <div class="showcases-container">
       <div class="showcase-container">
         <div class="showcase-text">
-          <p class="text-header">test</p>
-          <p class="text-dis">test stsetst stst stt es</p>
+          <p class="text-header">Free Shipping</p>
+          <p class="text-dis">Free shipping for cart above 500</p>
         </div>
-        <img src="../assets/prof.png" class="showcase-img">
+        <img src="../assets/shipping.png" class="showcase-img">
       </div>
       <div class="showcase-container">
         <div class="showcase-text">
-          <p class="text-header">test</p>
-          <p class="text-dis">test stsetst stst stt es</p>
+          <p class="text-header">Support</p>
+          <p class="text-dis">7 Days week 24 hours day with you</p>
         </div>
-        <img src="../assets/prof.png" class="showcase-img">
+        <img src="../assets/support.png" class="showcase-img">
       </div>
       <div class="showcase-container">
         <div class="showcase-text">
-          <p class="text-header">test</p>
-          <p class="text-dis">test stsetst stst stt es</p>
+          <p class="text-header">Browse</p>
+          <p class="text-dis">Browse in our huuuge collection</p>
         </div>
-        <img src="../assets/prof.png" class="showcase-img">
+        <img src="../assets/perfume.png" class="showcase-img">
       </div>
     </div>
     <div class="cards-container">
@@ -40,9 +40,9 @@
   </div>
   <div class="home2">
     <div class="secbanner-container"></div>
-    <cardsContainer typ="man"/>
-    <cardsContainer typ="woman"/>
-    <cardsContainer typ="discount"/>
+    <cardsContainer typ="man" i='0'/>
+    <cardsContainer typ="woman" i='1'/>
+    <cardsContainer typ="discount" i='2'/>
   </div>
 </template>
 

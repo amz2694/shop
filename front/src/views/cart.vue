@@ -23,7 +23,6 @@
 
 <script>
 import cartItem from '../components/cartItem.vue';
-import axios from 'axios';
 
 export default {
     name: 'cart',

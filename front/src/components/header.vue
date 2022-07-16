@@ -7,9 +7,11 @@
             <span>{{ this.$store.state.totalCart }}</span>
         </div>
         </router-link>
+        <router-link to="/">
         <div class="logo-container">
-            <span>SHOP</span>
+            <img src="../assets/shop.png" alt="" class="shoplogo">
         </div>
+        </router-link>
         <div class="option-container">
           <form method="get" action="/#/search">
             <input type="search" class="search" placeholder="search" name="query">
