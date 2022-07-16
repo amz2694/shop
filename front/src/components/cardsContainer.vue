@@ -4,8 +4,21 @@
       <h3 class="newest-text">for her</h3>
     </div>
     <div class="suggested-container">
+      <div class="back-container"  @click="backward">
+        <img src="../assets/forward.png"  class="forward">
+      </div>
       <div class="items-container" id="test">
         <itemCard v-for="(product,index) in products" :key="index" :item="product"/>
+        <itemCard v-for="(product,index) in products" :key="index" :item="product"/>
+        <itemCard v-for="(product,index) in products" :key="index" :item="product"/>
+        <itemCard v-for="(product,index) in products" :key="index" :item="product"/>
+        <itemCard v-for="(product,index) in products" :key="index" :item="product"/>
+        <itemCard v-for="(product,index) in products" :key="index" :item="product"/>
+        <itemCard v-for="(product,index) in products" :key="index" :item="product"/>
+        <itemCard v-for="(product,index) in products" :key="index" :item="product"/>
+      </div>
+      <div class="forward-container" @click="forward">
+        <img src="../assets/back.png" class="back">
       </div>
     </div>
 
@@ -19,7 +32,7 @@ import itemCard from './itemCard.vue';
 export default {
   name: 'cardsContainer',
   components: {itemCard},
-  props : ['typ'],
+  props : ['typ','i'],
     data() {
     return {
       products : [],
@@ -59,10 +72,10 @@ export default {
   },
   methods : {
     backward() {
-      document.getElementsByClassName("books-container")[this.i].scrollLeft +=250;
+      document.getElementsByClassName("items-container")[this.i].scrollLeft +=250;
     },
     forward() {
-      document.getElementsByClassName("books-container")[this.i].scrollLeft -=250;
+      document.getElementsByClassName("items-container")[this.i].scrollLeft -=250;
     }
   }
 }

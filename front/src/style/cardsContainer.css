@@ -20,13 +20,16 @@
 .suggested-container {
     display: flex;
 }
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .items-container::-webkit-scrollbar {
     display: none;
 }
+
 .items-container {
     display: flex;
     overflow-x: scroll;
+    scroll-snap-type: x mandatory;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
@@ -43,4 +46,18 @@
 
 .suggested:last-child {
     margin-bottom:0;
+}
+
+.back,
+.forward {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    padding: 4px;
+    border: rgb(180, 180, 180) solid 0.5px;
+    border-radius: 12px;
+    background-color: rgb(252, 232, 206);
+    margin: 0 15px;
+    margin-top: 200px;
+
 }
