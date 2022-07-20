@@ -4,7 +4,8 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    background-color: rgb(231, 231, 231);
+    background-color: #f6f6f6;
+    height: 68vh;
 }
 
 .rightnav-container {
@@ -115,7 +116,7 @@ td {
     border: none;
     border-radius: 30px;
     outline: none;
-    background-color: rgb(255, 242, 215);
+    background-color: #EEEEEE;
     height: 50px;
     padding-left: 5%;
 }
