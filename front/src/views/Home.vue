@@ -36,6 +36,9 @@
     </div>
     <div class="cards-container">
       <itemCard v-for="(product,index) in products" :key="index" :item="product"/>
+      <itemCard v-for="(product,index) in products" :key="index" :item="product"/>
+      <itemCard v-for="(product,index) in products" :key="index" :item="product"/>
+      <itemCard v-for="(product,index) in products" :key="index" :item="product"/>
     </div>
   </div>
   <div class="home2">

@@ -17,6 +17,7 @@
             <input type="search" class="search" placeholder="search" name="query">
           </form>
             <span class="register" @click="toggleViewLogin">register</span>
+            |
             <span class="login" @click="toggleViewLogin">login</span>
         </div>
       </div>

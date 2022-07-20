@@ -24,11 +24,11 @@ export default {
 </script>
 <style>
 @font-face {
-  font-family: fair;
-  src: url(./assets/PlayfairDisplay-VariableFont_wght.ttf);
+  font-family: CALIBRI;
+  src: url(./assets/font/CALIBRI.TTF);
 }
 * {
-  font-family: fair;
+  font-family: CALIBRI;
 }
 body {
   padding: 0;

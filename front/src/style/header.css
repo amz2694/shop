@@ -35,7 +35,7 @@
 
 .login,
 .register {
-    margin-left : 10px;
+    margin:0 10px;
     cursor: pointer;
 }
 

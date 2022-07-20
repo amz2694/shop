@@ -29,7 +29,7 @@
     background: url(../assets/banner.jpg) no-repeat;
     background-size: 100% 100%;
     background-position: center;
-    border-radius: 55px;
+    border-radius: 30px;
     margin-bottom: 40px;
 }
 
@@ -75,16 +75,19 @@
 
 .cards-container {
     width: 100%;
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
     flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(380px,1fr));
+    grid-gap: auto;
 }
 
 .home2 {
     width: 86%;
     padding: 0 7%;
     padding-top: 40px;
-    background-color: rgb(65, 255, 255);
+    background-color: #b1d2d5;
     padding-bottom: 50px;
 }
